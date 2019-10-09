@@ -5,10 +5,6 @@ function handleClick(e) {
   displayMessage(greet(timeString))
 }
 
-function displayMessage(msg) {
-  document.getElementById("greeting").innerText = msg;
-}
-
 /* End Given Code, don't edit above here...*/
 
 /* Write your implementation of greet() */
@@ -19,13 +15,18 @@ function greet(timeString){
     return 'Good Morning'
   }
   // else if (hour[0] > 12 ) {
-  //   return 'Good Afternoon'
-  // }
-  else if (hour[0] > 17) {
-  return 'Good Evening'
+    //   return 'Good Afternoon'
+    // }
+    else if (hour[0] > 17) {
+      return 'Good Evening'
+    }
+    else {
+      return 'Good Afternoon'
+    }
   }
-  else {
-    return 'Good Afternoon'
+  
+  
+  
+  function displayMessage(msg) {
+    document.getElementById("greeting").innerText = msg;
   }
-}
-
